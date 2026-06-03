@@ -6,7 +6,7 @@ export default function PokemonCard({ pokemon }) {
                     <img src={pokemon.sprites.front_default} alt={pokemon.name} />
                 </div>
                 <div className= "flex justify-center">
-                        <h2 className="text-2xl">{pokemon.name}</h2>
+                    <h2 className="text-2xl" style={{ fontFamily: 'VT323, monospace' }}>{pokemon.name}</h2>
                 </div>
                 <div className="flex justify-between">
                     <p>{pokemon.id}</p>
