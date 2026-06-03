@@ -17,6 +17,9 @@ export default function NavBar() {
                     <Link href="/saved" className="text-pink-400 hover:text-pink-600 text-sm font-semibold">
                         saved
                     </Link>
+                    <Link href="/pokebooth" className="text-pink-400 hover:text-pink-600 text-sm font-semibold">
+                        pokébooth 📷
+                    </Link>
                 </div>
             </div>
         </nav>
