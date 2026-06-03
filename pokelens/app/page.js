@@ -1,5 +1,5 @@
-// imports
-import PokemonCard from './components/PokemonCard'
+import Pokedex from './components/Pokedex'
+
 export default async function Home() {
   const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=20')
   const data = await response.json()
@@ -9,17 +9,13 @@ export default async function Home() {
   )
 
   return (
-    <main className= "flex justify-center">
-      <div className= "flex-col">
-        <div className= "flex justify-center">
-          <h1 className="text-red-400 font-bold text-4xl py-10">pokélens</h1>
-        </div>
-      <div className="grid grid-cols-4 gap-20 max-w-4xl mx-auto"> 
-        {pokemon.map((p) => (
-          <PokemonCard key={p.id} pokemon={p} />
-        ))}
+    <main className="pt-24 min-h-screen">
+      <div className="flex justify-center mb-6">
+        <h1 className="text-white inline-block bg-red-400 px-6 py-2 rounded-2xl text-4xl" style={{ fontFamily: 'VT323, monospace' }}>
+          pokélens
+        </h1>
       </div>
-      </div>
+      <Pokedex pokemon={pokemon} />
     </main>
   )
 }
