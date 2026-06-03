@@ -14,11 +14,11 @@ export default function NavBar() {
                     <Link href="/scan" className="text-pink-400 hover:text-pink-600 text-sm font-semibold">
                         pokevision
                     </Link>
-                    <Link href="/saved" className="text-pink-400 hover:text-pink-600 text-sm font-semibold">
-                        pokédex
-                    </Link>
                     <Link href="/pokebooth" className="text-pink-400 hover:text-pink-600 text-sm font-semibold">
                         pokébooth
+                    </Link>
+                    <Link href="/saved" className="text-pink-400 hover:text-pink-600 text-sm font-semibold">
+                        pokédex
                     </Link>
                 </div>
             </div>
