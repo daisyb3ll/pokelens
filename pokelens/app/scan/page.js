@@ -5,7 +5,7 @@ export default function ScanPage() {
         <main className="pt-24 min-h-screen">
             <div className="flex justify-center mb-6">
                 <h1 className="text-4xl text-pink-400" style={{ fontFamily: 'VT323, monospace' }}>
-                    pokéscanner 📷
+                    pokélens
                 </h1>
             </div>
             <CameraScanner />

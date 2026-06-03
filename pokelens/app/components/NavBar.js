@@ -9,16 +9,16 @@ export default function NavBar() {
                 </Link>
                 <div className="flex gap-6">
                     <Link href="/" className="text-pink-400 hover:text-pink-600 text-sm font-semibold">
-                        pokédex
+                        poképedia
                     </Link>
                     <Link href="/scan" className="text-pink-400 hover:text-pink-600 text-sm font-semibold">
-                        scan
+                        pokevision
                     </Link>
                     <Link href="/saved" className="text-pink-400 hover:text-pink-600 text-sm font-semibold">
-                        saved
+                        pokédex
                     </Link>
                     <Link href="/pokebooth" className="text-pink-400 hover:text-pink-600 text-sm font-semibold">
-                        pokébooth 📷
+                        pokébooth
                     </Link>
                 </div>
             </div>

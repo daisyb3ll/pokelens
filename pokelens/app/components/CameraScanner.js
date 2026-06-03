@@ -1,5 +1,5 @@
 'use client'
-
+import { supabase } from '../lib/supabase'
 import { useRef, useState, useEffect } from 'react'
 
 export default function CameraScanner() {
@@ -78,6 +78,26 @@ export default function CameraScanner() {
             const pokemonResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${match}`)
             const pokemon = await pokemonResponse.json()
             setResult(pokemon)
+
+            // auto save to pokédex
+            const { data: { session } } = await supabase.auth.getSession()
+            if (session) {
+                const { data: existing } = await supabase
+                    .from('saved_pokemon')
+                    .select('id')
+                    .eq('user_id', session.user.id)
+                    .eq('pokemon_id', pokemon.id)
+                    .single()
+
+                if (!existing) {
+                    await supabase.from('saved_pokemon').insert({
+                        user_id: session.user.id,
+                        pokemon_id: pokemon.id,
+                        pokemon_name: pokemon.name,
+                        sprite_url: pokemon.sprites.front_default
+                    })
+                }
+            }
         } else {
             setResult('not found')
         }
