@@ -20,6 +20,15 @@ export default function Auth() {
         setLoading(false)
     }
 
+    const handleGoogleLogin = async () => {
+        await supabase.auth.signInWithOAuth({
+            provider: 'google',
+            options: {
+                redirectTo: `${window.location.origin}/saved`
+            }
+        })
+    }
+
     if (sent) {
         return (
             <div className="text-center">
@@ -36,6 +45,18 @@ export default function Auth() {
             <p className="text-2xl text-pink-400" style={{ fontFamily: 'VT323, monospace' }}>
                 log in to save pokémon
             </p>
+            <button
+                onClick={handleGoogleLogin}
+                className="w-full px-6 py-3 bg-white border border-pink-200 rounded-full text-gray-600 font-semibold flex items-center justify-center gap-2 hover:border-pink-400"
+            >
+                <img src="https://www.google.com/favicon.ico" alt="google" className="w-4 h-4" />
+                continue with google
+            </button>
+            <div className="flex items-center w-full gap-2">
+                <div className="flex-1 h-px bg-pink-100" />
+                <span className="text-pink-300 text-sm">or</span>
+                <div className="flex-1 h-px bg-pink-100" />
+            </div>
             <input
                 type="email"
                 placeholder="your email..."
