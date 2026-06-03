@@ -36,14 +36,36 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 
+
+## Acknowledgements & Shoutouts! 
+
+- [PokéAPI](https://pokeapi.co/) — A free, open-source RESTful API providing comprehensive Pokémon data.
+
+
+# PokéLens
+A Pokédex web app built with Next.js and the PokéAPI. 
+Search and browse Pokémon by name, type, stats, and community types (i.e, emo, ugly, cute, blue, etc.)
+
+***Phase 1***
+Browsing and searching Pokémon using the PokéAPI. 
+Includes type filtering and stat display.
+***Phase 2***
+will include a camera scanner to identify Pokémon in real life.
+
+## Tech Stack
+- Next.js
+- PokéAPI (https://pokeapi.co/)
+- Tailwind CSS
+
+## Run Locally
+1. Clone the repo
+2. Run `npm install`
+3. Run `npm run dev`
+4. Open http://localhost:3000
+
 ## Actual Goals!
 - [x] Browse + search Pokédex
 - [x] Filter by type
 - [x] Pokemon detail page
 - [ ] Camera scanner (Phase 2)
 - [ ] Save caught Pokémon (Phase 3)
-
-
-## Acknowledgements & Shoutouts! 
-
-- [PokéAPI](https://pokeapi.co/) — A free, open-source RESTful API providing comprehensive Pokémon data.

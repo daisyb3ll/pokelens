@@ -1,4 +1,5 @@
 import Pokedex from './components/Pokedex'
+import CameraScanner from './components/CameraScanner'
 
 export default async function Home() {
   const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=20')
@@ -15,7 +16,10 @@ export default async function Home() {
           pokélens
         </h1>
       </div>
-      <Pokedex pokemon={pokemon} />
+      <div className="px-6 py-2">
+        <CameraScanner />
+      </div>
+      <Pokedex initialPokemon={pokemon} />
     </main>
   )
 }
