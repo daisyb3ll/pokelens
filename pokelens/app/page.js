@@ -11,14 +11,6 @@ export default async function Home() {
 
   return (
     <main className="pt-24 min-h-screen">
-      <div className="flex justify-center mb-6">
-        <h1 className="text-white inline-block bg-red-400 px-6 py-2 rounded-2xl text-4xl" style={{ fontFamily: 'VT323, monospace' }}>
-          pokélens
-        </h1>
-      </div>
-      <div className="px-6 py-2">
-        <CameraScanner />
-      </div>
       <Pokedex initialPokemon={pokemon} />
     </main>
   )
