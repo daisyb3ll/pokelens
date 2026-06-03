@@ -36,6 +36,14 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 
+## Actual Goals!
+- [x] Browse + search Pokédex
+- [x] Filter by type
+- [x] Pokemon detail page
+- [ ] Camera scanner (Phase 2)
+- [ ] Save caught Pokémon (Phase 3)
+
+
 ## Acknowledgements & Shoutouts! 
 
 - [PokéAPI](https://pokeapi.co/) — A free, open-source RESTful API providing comprehensive Pokémon data.
