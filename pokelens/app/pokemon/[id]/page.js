@@ -1,5 +1,8 @@
 import Link from 'next/link'
 
+import SaveButton from '../../components/SaveButton'
+
+
 export default async function PokemonPage({ params }) {
     const { id } = await params
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
@@ -28,6 +31,7 @@ export default async function PokemonPage({ params }) {
                                 </span>
                             ))}
                         </div>
+                        <SaveButton pokemon={pokemon} />
                     </div>
                     <div className="flex flex-col items-center">
                         <img src={pokemon.sprites.front_default} alt={pokemon.name} className="w-32 h-32" />
